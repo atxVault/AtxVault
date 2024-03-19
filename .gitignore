@@ -1,0 +1,12 @@
+node_modules/
+.env
+.auth
+config.env
+package-lock.json
+temp/
+auto/
+.vscode/
+copy_atx.sh
+atx/config/
+atx/database/
+atx/project-custom
