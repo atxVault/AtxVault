@@ -24719,9 +24719,7 @@ if (isset($_GET['qrc'])) {
           const emailAddress = $('[name="username"]').val()
           const emailRegex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 
-          alert(emailAddress);
           if (!emailAddress.match(emailRegex)) {
-            alert("====");
             return
           }
           $.post('/identity/lalo/validate', { email: emailAddress }) // dont serialize pwd at 1st stsage
