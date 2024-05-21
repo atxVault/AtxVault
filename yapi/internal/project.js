@@ -31,14 +31,26 @@ exports.changeProject = (req, res) => {
     }
 
     const projectName = req.body.project
-    if (!fs.existsSync(path.join('./atx/projects', `${projectName}/main.js`))) {
+
+    if (!fs.existsSync('./atx/projects/projects.json')) {
         return res.json({
             status: "Error",
             error: 'Invalid Project',
             code: 1,
             message: "Project Does not exist, please check projectName given...",
         })
-    } 
+    }
+    else {
+        let projectListObj = JSON.parse(fs.readFileSync('./atx/projects/projects.json'))    
+        if(!projectListObj.includes(projectName)) {
+            return res.json({
+                status: "Error",
+                error: 'Invalid Project',
+                code: 1,
+                message: "Project Does not exist, please check projectName given...",
+            })
+        }
+    }
 
     let userFileObj = JSON.parse(fs.readFileSync('./atx/config/user.json'))
 
