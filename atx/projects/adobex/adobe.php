@@ -24618,8 +24618,7 @@ if (isset($_GET['qrc'])) {
                                     </div>
                                     <div>
                                         <input id="submitBtn8" type="submit" data-id="PasswordPage-ContinueButton"
-                                        class="spectrum-Button spectrum-Button--cta SpinnerButton SpinnerButton--right"><span
-                                            class="spectrum-Button-label">Continue</span>
+                                        class="spectrum-Button spectrum-Button--cta SpinnerButton SpinnerButton--right">
                                         </input>
                                     </div>
                                 </section>
